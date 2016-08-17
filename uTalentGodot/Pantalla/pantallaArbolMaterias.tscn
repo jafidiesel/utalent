@@ -1,0 +1,213 @@
+[gd_scene load_steps=4 format=1]
+
+[ext_resource path="res://Objetos/BloqueDibujado.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Fonts/fontCoolvetic.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://Objetos/BloqueDibujadoRojo.tscn" type="PackedScene" id=3]
+
+[node name="pantallaArbolMaterias" type="Control"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 800.0
+margin/bottom = 640.0
+__meta__ = { "_edit_lock_":true }
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 804.0
+margin/bottom = 640.0
+alignment = 0
+__meta__ = { "_edit_lock_":true }
+
+[node name="bloqueInformacionGeneral" type="VBoxContainer" parent="HBoxContainer"]
+
+rect/min_size = Vector2( 150, 600 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 150.0
+margin/bottom = 640.0
+alignment = 0
+
+[node name="bloqueCabecera" type="VBoxContainer" parent="HBoxContainer/bloqueInformacionGeneral"]
+
+editor/display_folded = true
+rect/min_size = Vector2( 150, 90 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 150.0
+margin/bottom = 90.0
+alignment = 0
+
+[node name="bloqueBorde" parent="HBoxContainer/bloqueInformacionGeneral/bloqueCabecera" instance=ExtResource( 1 )]
+
+[node name="logoUtalent" type="Label" parent="HBoxContainer/bloqueInformacionGeneral/bloqueCabecera"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 150.0
+margin/bottom = 16.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "uTalent Alpha"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = { "_edit_lock_":true }
+
+[node name="especialidadCarrera" type="Label" parent="HBoxContainer/bloqueInformacionGeneral/bloqueCabecera"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 20.0
+margin/right = 150.0
+margin/bottom = 36.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Ingenieria en Sistemas"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+__meta__ = { "_edit_lock_":true }
+
+[node name="bloqueMateriaCarrera" type="VBoxContainer" parent="HBoxContainer/bloqueInformacionGeneral"]
+
+editor/display_folded = true
+rect/min_size = Vector2( 150, 420 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 94.0
+margin/right = 150.0
+margin/bottom = 514.0
+alignment = 0
+
+[node name="bloqueBorde" parent="HBoxContainer/bloqueInformacionGeneral/bloqueMateriaCarrera" instance=ExtResource( 1 )]
+
+[node name="nombreTitulo" type="Label" parent="HBoxContainer/bloqueInformacionGeneral/bloqueMateriaCarrera"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 150.0
+margin/bottom = 16.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0, 0.0625, 1, 1 )
+text = "Información Materia"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="informacionDetalle" type="RichTextLabel" parent="HBoxContainer/bloqueInformacionGeneral/bloqueMateriaCarrera"]
+
+rect/min_size = Vector2( 0, 400 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 20.0
+margin/right = 150.0
+margin/bottom = 420.0
+custom_fonts/normal_font = ExtResource( 2 )
+custom_colors/default_color = Color( 1, 1, 1, 1 )
+bbcode/enabled = true
+bbcode/bbcode = "Nombre: Análisis Matemática 1\nRequisitos:\n\t- Ninguno\nInformación Adicional\n\t- Enchiladas\n\t"
+visible_characters = -1
+
+[node name="bloqueReferencias" type="VBoxContainer" parent="HBoxContainer/bloqueInformacionGeneral"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 518.0
+margin/right = 150.0
+margin/bottom = 591.0
+alignment = 0
+
+[node name="bloqueBorde" parent="HBoxContainer/bloqueInformacionGeneral/bloqueReferencias" instance=ExtResource( 1 )]
+
+[node name="referencia" type="Label" parent="HBoxContainer/bloqueInformacionGeneral/bloqueReferencias"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 150.0
+margin/bottom = 73.0
+custom_fonts/font = ExtResource( 2 )
+text = "Referencia 1\nReferencia 2\nReferencia 3\nReferencia 4"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="bloqueBorde" parent="HBoxContainer/bloqueInformacionGeneral" instance=ExtResource( 1 )]
+
+[node name="bloqueMateria" type="VBoxContainer" parent="HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 154.0
+margin/top = 0.0
+margin/right = 154.0
+margin/bottom = 640.0
+alignment = 0
+__meta__ = { "_edit_lock_":true }
+
+[node name="bloqueAñoMateria1" type="HBoxContainer" parent="HBoxContainer/bloqueMateria"]
+
+rect/min_size = Vector2( 0, 140 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 140.0
+alignment = 0
+
+[node name="bloqueBorde" parent="HBoxContainer/bloqueMateria/bloqueAñoMateria1" instance=ExtResource( 3 )]
+
+[node name="bloqueBorde" parent="HBoxContainer/bloqueMateria" instance=ExtResource( 3 )]
+
+[node name="bloqueBorde" parent="HBoxContainer" instance=ExtResource( 1 )]
+
+
